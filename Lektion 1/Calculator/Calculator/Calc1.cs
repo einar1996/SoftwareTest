@@ -24,6 +24,11 @@ namespace Calculator
 
         public double Divide(double dividend, double divisor)
         {
+            if (divisor == 0)
+            {
+                throw new ArgumentException("Division with zero is impossible!");
+            }
+
             return Accumulator = dividend / divisor;
         }
 
@@ -51,6 +56,11 @@ namespace Calculator
 
         public double Divide(double divisor)
         {
+            if (divisor == 0)
+            {
+                throw new ArgumentException("Division with zero is impossible!");
+            }
+
             return Accumulator /= divisor;
         }
     }
