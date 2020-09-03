@@ -14,8 +14,10 @@ namespace Calculator.Test.Unit
             uut = new Calc1();
         }
 
+
+        [TestCase(45,10, 55)]
         [Test]
-        public void AddTwoNumbers_1020_Equals30()
+        public void AddTwoNumbers_1020_Equals30(double a, double b, double c)
         {
             // Arrange in Setup
 
@@ -23,7 +25,7 @@ namespace Calculator.Test.Unit
            
 
             // Assert
-            Assert.That(uut.Add(10, 20), Is.EqualTo(30));
+            Assert.That(uut.Add(a, b), Is.EqualTo(c));
 
         }
 
