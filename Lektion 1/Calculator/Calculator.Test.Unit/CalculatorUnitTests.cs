@@ -191,15 +191,26 @@ namespace Calculator.Test.Unit
         }
 
         [Test]
-        public void DivideAccumulatorBy0_Accumulator0_EqualsResult(double divisor, double accumulator, double Result)
+        
+        public void DivideAccumulatorBy0_Accumulator0_ThrowsException()
         {
             // Arrange in Setup
-            uut.Add(accumulator);
+            uut.Add(10);
             // Act
-            uut.Divide(divisor);
 
             // Assert
-            Assert.That(uut.Accumulator, Is.EqualTo(Result).Within(0.1));
+            Assert.Throws<ArgumentException>(() => uut.Divide(0), "Division with zero is impossible!");
+
+        }
+        [Test]
+        public void DivideDividentByDivisor_DividentDivisor_ThrowsException()
+        {
+            // Arrange in Setup
+            
+            // Act
+
+            // Assert
+            Assert.Throws<ArgumentException>(() => uut.Divide(10,0), "Division with zero is impossible!");
 
         }
 
