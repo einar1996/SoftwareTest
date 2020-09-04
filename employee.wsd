@@ -1,0 +1,35 @@
+@startuml
+
+
+class Employee {
+    + name : string
+    + salary : uint
+}
+
+class EmployeeDB {
+    - _employees : List<Employee>
+    - _currentEmployeeIndex: int
+
+    + reset(void) : void
+    + GetNextEmployee(void) : Employee
+    + AddEmployee(Employee) : void
+}
+
+enum ReportOutputFormatType {
+    NameFirst
+    SalaryFirst
+}
+
+class ReportGenerator
+    {
+    - _employeeDb: EmployeeDB
+    - _currentOutputFormat: ReportOutputFormatType
+    + CompileReport() : void
+    + SetOutputFormat(ReportOutputFormatType) : void    
+    }
+EmployeeDB --> Employee
+ReportGenerator --> EmployeeDB
+
+
+hide empty methods
+@enduml
