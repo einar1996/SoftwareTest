@@ -17,7 +17,7 @@ namespace Calculator.Test.Unit
 
         [TestCase(45,10, 55)]
         [TestCase(-50, 10, -40)]
-        [TestCase(0, 0.5, 0.5)]
+        [TestCase(1, 0.5, 1.5)]
         [Test]
         public void AddTwoNumbers_AB_EqualsResult(double a, double b, double Result)
         {
