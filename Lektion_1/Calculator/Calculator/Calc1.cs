@@ -63,5 +63,23 @@ namespace Calculator
 
             return Accumulator /= divisor;
         }
+
+        public double SqaureRoot(double SQRTNR)
+        {
+            if (SQRTNR < 0)
+            {
+                throw new ArgumentException("SQRT of less then zero is impossible!");
+            }
+            return Accumulator= Math.Sqrt(SQRTNR);
+        }
+
+        public double SqaureRoot()
+        {
+            if (Accumulator < 0)
+            {
+                throw new ArgumentException("SQRT of less then zero is impossible!");
+            }
+            return Accumulator = Math.Sqrt(Accumulator);
+        }
     }
 }
