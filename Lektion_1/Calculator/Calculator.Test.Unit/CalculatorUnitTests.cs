@@ -160,7 +160,7 @@ namespace Calculator.Test.Unit
 
         [TestCase(45, 10, 0.22)]
         [TestCase(10, -50, -5)]
-        [TestCase(0, 0.5, 0)]
+        [TestCase(2, 2, 1)]
         [Test]
         public void DivideAccumulatorByNumber_AccumulatorDivisor_EqualsResult(double divisor, double accumulator, double Result)
         {
